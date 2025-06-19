@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { useRef } from 'react';
 import { useState } from 'react';
@@ -30,13 +29,13 @@ const Manager = () => {
     const showPassword = () => {
         passwordRef.current.type = "text"
         console.log(ref.current.src)
-        if (ref.current.src.includes("eyecross.png")) {
+        if (ref.current.src.includes("src/assets/eyecross.png")) {
             ref.current.src = "eye.png"
             passwordRef.current.type = "text"
 
         }
         else {
-            ref.current.src = "eyecross.png"
+            ref.current.src = "src/assets/eyecross.png"
             passwordRef.current.type = "password"
         }
     }
@@ -151,7 +150,7 @@ const Manager = () => {
                             <div className='relative'>
                                 <input ref={passwordRef} value={form.password} onChange={handleChange} placeholder='Enter Password' className='rounded-full border border-green-500 w-full px-4 py-1' type="password" name="password" id="password" />
                                 <span className='absolute right-[3px] top-[4px] cursor-pointer' onClick={showPassword}>
-                                    <img ref={ref} className='p-1' width={26} src="eye.png" alt="eye" />
+                                    <img ref={ref} className='p-1' width={26} src="src/assets/eye.png" alt="eye" />
                                 </span>
                             </div>
                         </div>
